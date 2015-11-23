@@ -25,6 +25,7 @@ public class RapidFtrApplication extends DroidFuApplication {
     public static List<ChildDetailsForm> getChildFormSections() throws Exception{
         List<ChildDetailsForm> formList = Arrays.asList(new ObjectMapper().readValue(getFormSectionsBody(), ChildDetailsForm[].class));
         Collections.sort(formList);
+	Collections.reverse(formList);
         return formList;
     }
 
